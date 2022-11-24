@@ -1,9 +1,8 @@
-describe("Sumador", () => {
-  it("Shows the amount of the addition to the user", () => {
+describe("Pagina Principal", () => {
+  it("Deberia poder ver la publicacion en la lista de publicaciones", () => {
     cy.visit("/");
-    cy.get("#primer-numero").type(4);
-    cy.get("#segundo-numero").type(5);
-    cy.get("#sumar-button").click();
-    cy.get("#resultado-div").should("contain", "9");
+    cy.get("#post").type("Hola mundo");
+    cy.get("#publicar-button").click();
+    //cy.get("#resultado-div").should("contain", "Hola mundo");
   });
 });

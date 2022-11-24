@@ -1,7 +1,9 @@
-import sumar from "./sumador.js";
+import Publicacion from "./sumador.js";
 
-describe("Sumar", () => {
-  it("deberia sumar dos numeros", () => {
-    expect(sumar(3, 2)).toEqual(5);
+describe("Crear publicacion", () => {
+  let pub = new Publicacion();
+  it("deberia añadir a la publicacion", () => {
+    pub.putTexto("Hola mundo")
+    expect(pub.textoPublicacion).toEqual("Hola mundo");
   });
 });

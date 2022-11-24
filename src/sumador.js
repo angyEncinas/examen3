@@ -1,5 +1,12 @@
-function sumar(a, b) {
-  return a + b;
+class Publicacion {
+  constructor() {
+      this.textoPublicacion = "";
+  }
+  putTexto(publicacion){
+    this.textoPublicacion = publicacion;
+  }
+  getTexto(publicacion){
+    return this.textoPublicacion;
+  }
 }
-
-export default sumar;
+ export default Publicacion;

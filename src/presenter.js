@@ -1,15 +1,14 @@
-import sumar from "./sumador";
+import Publicacion from "./sumador";
 
-const first = document.querySelector("#primer-numero");
-const second = document.querySelector("#segundo-numero");
-const form = document.querySelector("#sumar-form");
+const postdado = document.querySelector("#post");
+const form = document.querySelector("#post-form");
 const div = document.querySelector("#resultado-div");
-
+pub = new Publicacion();
+let publicaciones = []
 form.addEventListener("submit", (event) => {
   event.preventDefault();
 
-  const firstNumber = Number.parseInt(first.value);
-  const secondNumber = Number.parseInt(second.value);
-
-  div.innerHTML = "<p>" + sumar(firstNumber, secondNumber) + "</p>";
+  const post = postdado.value;
+  pub.putTexto(post);
+  div.innerHTML = "<p>" +pub.getTexto() + "</p>";
 });
