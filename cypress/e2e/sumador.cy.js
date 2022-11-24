@@ -9,6 +9,6 @@ describe("Pagina Principal", () => {
     cy.visit("/");
     cy.get("#post").type(" ");
     cy.get("#publicar-button").click();
-    cy.get("#resultado-div").should("contain", "No se puede ingresar un post sin texto");
+    cy.get("#alerta-div").should("contain", "No se puede ingresar un post sin texto");
   });
 });
